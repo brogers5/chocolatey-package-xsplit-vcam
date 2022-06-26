@@ -7,7 +7,7 @@
     <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.0.2205.3103</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>XSplit VCam</title>
-    <authors>SplitmediaLabs, Ltd.</authors>
+    <authors>SplitmediaLabs Ltd.</authors>
     <projectUrl>https://www.xsplit.com/vcam</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-xsplit-vcam@7ddfa2f456eb462820f4e95f5d38652e15316f98/xsplit-vcam.png</iconUrl>
     <copyright>© 2022 SplitmediaLabs, Ltd. All Rights Reserved.</copyright>
