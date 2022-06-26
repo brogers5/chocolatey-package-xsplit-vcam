@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>xsplit-vcam</id>
-    <version>4.0.2205.3103</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.0.2205.3103</packageSourceUrl>
-    <owners>sublym0nal</owners>
-    <title>XSplit VCam</title>
-    <authors>SplitmediaLabs, Ltd.</authors>
-    <projectUrl>https://www.xsplit.com/vcam</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-xsplit-vcam@7ddfa2f456eb462820f4e95f5d38652e15316f98/xsplit-vcam.png</iconUrl>
-    <copyright>© 2022 SplitmediaLabs, Ltd. All Rights Reserved.</copyright>
-    <licenseUrl>https://www.xsplit.com/terms-and-conditions</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.xsplit.com/support/vcam</docsUrl>
-    <mailingListUrl>https://community.xsplit.com/c/vcam/9</mailingListUrl>
-    <tags>xsplit-vcam xsplit vcam webcam virtual camera cam background blur watermark screenshot 64-bit freemium cross-platform</tags>
-    <summary>Webcam Background Removal</summary>
-    <description><![CDATA[
+
 ---
 
 ### [choco://xsplit-vcam](choco://xsplit-vcam)
@@ -83,13 +64,3 @@ For future upgrade operations, consider opting into Chocolatey's `useRememberedA
 ```
 choco feature enable -n=useRememberedArgumentsForUpgrades
 ```
-]]></description>
-    <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vQSvRaRIYN9tiiHbQngJ-q9zWBVpAgZQC9zM2LuRwXu1y7LDoUUVSliYybsIN-AWJcXNA9rU0BOyYq-/pub</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
-</package>
