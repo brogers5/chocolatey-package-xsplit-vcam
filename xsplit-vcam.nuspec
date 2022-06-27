@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xsplit-vcam</id>
-    <version>4.0.2205.3103</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.0.2205.3103</packageSourceUrl>
+    <version>4.0.2206.2307</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.0.2206.2307</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>XSplit VCam</title>
     <authors>SplitmediaLabs Ltd.</authors>
@@ -84,7 +84,7 @@ For future upgrade operations, consider opting into Chocolatey's `useRememberedA
 choco feature enable -n=useRememberedArgumentsForUpgrades
 ```
 ]]></description>
-    <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vQSvRaRIYN9tiiHbQngJ-q9zWBVpAgZQC9zM2LuRwXu1y7LDoUUVSliYybsIN-AWJcXNA9rU0BOyYq-/pub</releaseNotes>
+    <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vQPf9PVKXgPOW6EQSn46tfXpjp9jmKfZYtc-AuG2XsJYKLynCwvEG--WBB4VV9Y_KISvYA0MhAKcxXK/pub</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
