@@ -18,7 +18,7 @@ When connected to the XSplit Connect mobile companion app, your mobile device's 
 
 ## Package Notes
 
-This package depends on downloading from XSplit's official distribution point. Therefore, supportability should be expected to follow [XSplit's support policy](https://www.xsplit.com/blog/xsplit-version-updates). Notably, once a given version is no longer supported, availabilty of the installer binary cannot be guaranteed. Consequently, this package version should generally be considered obsolete and unsupported once the consumed software version reaches end-of-support.
+This package depends on downloading from XSplit's official distribution point. Therefore, supportability should be expected to follow [XSplit's support policy](https://www.xsplit.com/blog/xsplit-version-updates). Notably, once a given version is no longer supported, availability of the installer binary cannot be guaranteed. Consequently, this package version should generally be considered obsolete and unsupported once the consumed software version reaches end-of-support.
 
 Consider [internalizing this package](https://docs.chocolatey.org/en-us/guides/create/recompile-packages) if you require the ability to install this specific version after it reaches end-of-support.
 
