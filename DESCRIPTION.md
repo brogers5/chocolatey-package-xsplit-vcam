@@ -2,6 +2,7 @@
 ---
 
 ### [choco://xsplit-vcam](choco://xsplit-vcam)
+
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
 
 ---
@@ -27,6 +28,7 @@ Consider [internalizing this package](https://docs.chocolatey.org/en-us/guides/c
 The installer executed by this package was built using Advanced Installer. However, this package consumes an alternate Windows Installer MSI distribution intended for enterprise deployments, and does not execute the bootstrapper that is typically consumed by end-users.
 
 Notable properties include:
+
 * `ProductLanguage` - Overrides the default language configuration. [Uses a `LANGID` value](https://docs.microsoft.com/en-us/windows/win32/msi/localizing-the-error-and-actiontext-tables).
 
     Supported `LANGID` values include:
@@ -54,13 +56,14 @@ Any desired arguments can simply be appended to the package's default install ar
 
 ### Example
 
-```
+```shell
 choco install xsplit-vcam --install-arguments "ProductLanguage=3082 AI_DESKTOP_SH=0 XI_ONBOARD=0"
 ```
 
 ---
 
 For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
-```
+
+```shell
 choco feature enable -n=useRememberedArgumentsForUpgrades
 ```
