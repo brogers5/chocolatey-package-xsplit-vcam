@@ -1,19 +1,20 @@
-﻿# <img src="https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-xsplit-vcam@7ddfa2f456eb462820f4e95f5d38652e15316f98/xsplit-vcam.png" width="48" height="48"/> Chocolatey Package: [XSplit VCam](https://community.chocolatey.org/packages/xsplit-vcam/)
+﻿# <img src="https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-xsplit-vcam@7ddfa2f456eb462820f4e95f5d38652e15316f98/xsplit-vcam.png" width="48" height="48"/> Chocolatey Package: [XSplit VCam](https://community.chocolatey.org/packages/xsplit-vcam)
 
-[![Chocolatey package version](https://img.shields.io/chocolatey/v/xsplit-vcam.svg)](https://community.chocolatey.org/packages/xsplit-vcam/)
-[![Chocolatey package download count](https://img.shields.io/chocolatey/dt/xsplit-vcam.svg)](https://community.chocolatey.org/packages/xsplit-vcam/)
+[![Chocolatey package version](https://img.shields.io/chocolatey/v/xsplit-vcam.svg)](https://community.chocolatey.org/packages/xsplit-vcam)
+[![Chocolatey package download count](https://img.shields.io/chocolatey/dt/xsplit-vcam.svg)](https://community.chocolatey.org/packages/xsplit-vcam)
 
 ## Install
 
-[Install Chocolatey](https://chocolatey.org/install), and run the following command to install the latest approved version on the Chocolatey Community Repository:
+[Install Chocolatey](https://chocolatey.org/install), and run the following command to install the latest approved version from the Chocolatey Community Repository:
+
 ```shell
-choco install xsplit-vcam
+choco install xsplit-vcam --source="'https://community.chocolatey.org/api/v2'"
 ```
 
 Alternatively, the packages as published on the Chocolatey Community Repository will also be mirrored on this repository's [Releases page](https://github.com/brogers5/chocolatey-package-xsplit-vcam/releases). The `nupkg` can be installed from the current directory (with dependencies sourced from the Community Repository) as follows:
 
 ```shell
-choco install xsplit-vcam -source="'.;https://community.chocolatey.org/api/v2/'"
+choco install xsplit-vcam --source="'.;https://community.chocolatey.org/api/v2/'"
 ```
 
 ## Build
