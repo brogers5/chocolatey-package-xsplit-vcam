@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xsplit-vcam</id>
-    <version>4.0.2207.0504</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.0.2207.0504</packageSourceUrl>
+    <version>4.1.2210.2601</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.1.2210.2601</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>XSplit VCam</title>
     <authors>SplitmediaLabs Ltd.</authors>
@@ -21,7 +21,8 @@
 ---
 
 ### [choco://xsplit-vcam](choco://xsplit-vcam)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://chocolatey.org/packages/choco-protocol-support)
+
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
 
 ---
 
@@ -37,7 +38,7 @@ When connected to the XSplit Connect mobile companion app, your mobile device's 
 
 ## Package Notes
 
-This package depends on downloading from XSplit's official distribution point. Therefore, supportability should be expected to follow [XSplit's support policy](https://www.xsplit.com/blog/xsplit-version-updates). Notably, once a given version is no longer supported, availabilty of the installer binary cannot be guaranteed. Consequently, this package version should generally be considered obsolete and unsupported once the consumed software version reaches end-of-support.
+This package depends on downloading from XSplit's official distribution point. Therefore, supportability should be expected to follow [XSplit's support policy](https://www.xsplit.com/blog/xsplit-version-updates). Notably, once a given version is no longer supported, availability of the installer binary cannot be guaranteed. Consequently, this package version should generally be considered obsolete and unsupported once the consumed software version reaches end-of-support.
 
 Consider [internalizing this package](https://docs.chocolatey.org/en-us/guides/create/recompile-packages) if you require the ability to install this specific version after it reaches end-of-support.
 
@@ -46,6 +47,7 @@ Consider [internalizing this package](https://docs.chocolatey.org/en-us/guides/c
 The installer executed by this package was built using Advanced Installer. However, this package consumes an alternate Windows Installer MSI distribution intended for enterprise deployments, and does not execute the bootstrapper that is typically consumed by end-users.
 
 Notable properties include:
+
 * `ProductLanguage` - Overrides the default language configuration. [Uses a `LANGID` value](https://docs.microsoft.com/en-us/windows/win32/msi/localizing-the-error-and-actiontext-tables).
 
     Supported `LANGID` values include:
@@ -73,18 +75,19 @@ Any desired arguments can simply be appended to the package's default install ar
 
 ### Example
 
-```
+```shell
 choco install xsplit-vcam --install-arguments "ProductLanguage=3082 AI_DESKTOP_SH=0 XI_ONBOARD=0"
 ```
 
 ---
 
 For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
-```
-choco feature enable -n=useRememberedArgumentsForUpgrades
+
+```shell
+choco feature enable --name=useRememberedArgumentsForUpgrades
 ```
 ]]></description>
-    <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vQSKakt_f6UY6QVJ_5GdyosNmurYUjEmxgbu0FL2K_fMBqfk_Prsz_aWHpr3PribmqQZ-zQ8XYsnfhk/pub</releaseNotes>
+    <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vQZY8C5v2631cUed-NFQb9spT94tu5N9OEtqdPQ3u1NI7iQr-qERNXa46pHrVK_StJUkX0x-wqelPok/pub</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
