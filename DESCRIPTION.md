@@ -65,5 +65,5 @@ choco install xsplit-vcam --install-arguments "ProductLanguage=3082 AI_DESKTOP_S
 For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
 
 ```shell
-choco feature enable --name=useRememberedArgumentsForUpgrades
+choco feature enable --name="'useRememberedArgumentsForUpgrades'"
 ```
