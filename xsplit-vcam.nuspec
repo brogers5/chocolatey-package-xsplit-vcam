@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xsplit-vcam</id>
-    <version>4.1.2211.2501</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.1.2211.2501</packageSourceUrl>
+    <version>4.1.2303.1301</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.1.2303.1301</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>XSplit VCam</title>
     <authors>SplitmediaLabs Ltd.</authors>
     <projectUrl>https://www.xsplit.com/vcam</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-xsplit-vcam@7ddfa2f456eb462820f4e95f5d38652e15316f98/xsplit-vcam.png</iconUrl>
-    <copyright>© 2022 SplitmediaLabs, Ltd. All Rights Reserved.</copyright>
+    <copyright>© 2023 SplitmediaLabs, Ltd. All Rights Reserved.</copyright>
     <licenseUrl>https://www.xsplit.com/terms-and-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.xsplit.com/en/category/xsplit-vcam-1yieers/</docsUrl>
@@ -84,10 +84,10 @@ choco install xsplit-vcam --install-arguments "ProductLanguage=3082 AI_DESKTOP_S
 For future upgrade operations, consider opting into Chocolatey's `useRememberedArgumentsForUpgrades` feature to avoid having to pass the same arguments with each upgrade:
 
 ```shell
-choco feature enable --name=useRememberedArgumentsForUpgrades
+choco feature enable --name="'useRememberedArgumentsForUpgrades'"
 ```
 ]]></description>
-    <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vQZY8C5v2631cUed-NFQb9spT94tu5N9OEtqdPQ3u1NI7iQr-qERNXa46pHrVK_StJUkX0x-wqelPok/pub</releaseNotes>
+    <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vR-_FCBC9uklubXlP4Qi2zfj8eZktdRthn6i2fJmhGy6zkLDdeLFU0Ad9Hj7TLTD94R6c5TxyyQXVtI/pub</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
