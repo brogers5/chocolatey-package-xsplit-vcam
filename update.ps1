@@ -2,7 +2,7 @@ Import-Module au
 
 function global:au_BeforeUpdate ($Package) {
     #Archive this version for future development, since the vendor does not guarantee perpetual availability
-    $filePath = ".\XSplit_VCam_$($Latest.Version).msi"
+    $filePath = ".\XSplit_VCam_$($Latest.SoftwareVersion).msi"
     Invoke-WebRequest -Uri $Latest.Url64 -OutFile $filePath
 
     $Latest.Checksum64 = (Get-FileHash -Path $filePath -Algorithm SHA256).Hash.ToLower()
@@ -17,7 +17,7 @@ function global:au_AfterUpdate ($Package) {
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1'   = @{
-            '(^\[version\] \$softwareVersion\s*=\s*)''.*''' = "`$1'$($Latest.Version)'"
+            '(^\[version\] \$softwareVersion\s*=\s*)''.*''' = "`$1'$($Latest.SoftwareVersion)'"
             '(^[$]?\s*url64bit\s*=\s*)(''.*'')'             = "`$1'$($Latest.Url64)'"
             '(^[$]?\s*checksum64\s*=\s*)(''.*'')'           = "`$1'$($Latest.Checksum64)'"
         }
@@ -38,9 +38,10 @@ function global:au_GetLatest {
     $releaseData = $response.data[0]
 
     return @{
-        Url64        = $releaseData.download_url
-        Version      = $releaseData.version
-        ReleaseNotes = $releaseData.release_notes_url
+        ReleaseNotes    = $releaseData.release_notes_url
+        SoftwareVersion = $releaseData.version
+        Url64           = $releaseData.download_url
+        Version         = $releaseData.version #This may change if building a package fix version
     }
 }
 
