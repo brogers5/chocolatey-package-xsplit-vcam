@@ -8,8 +8,7 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $softwareVersion = '4.1.2211.2501'
 
 $installedVersion = Get-CurrentVersion
-if ([Version] $softwareVersion -lt [Version] $installedVersion)
-{
+if ([Version] $softwareVersion -lt [Version] $installedVersion) {
   Write-Output "Current installed version (v$installedVersion) must be uninstalled first..."
   Uninstall-CurrentVersion
 }

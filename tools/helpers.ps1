@@ -1,7 +1,6 @@
 ﻿$softwareName = 'XSplit VCam'
 
-function Uninstall-CurrentVersion()
-{
+function Uninstall-CurrentVersion {
     $packageArgs = @{
         packageName    = $env:ChocolateyPackageName
         softwareName   = $softwareName
@@ -12,12 +11,10 @@ function Uninstall-CurrentVersion()
     
     [array] $keys = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
     
-    if ($keys.Count -eq 0)
-    {
+    if ($keys.Count -eq 0) {
         Write-Warning "$packageName has already been uninstalled by other means."
     }
-    elseif ($keys.Count -le 2)
-    {
+    elseif ($keys.Count -le 2) {
         #XSplit VCam adds a couple keys. We need to use the one named after the product code GUID.
         $key = $keys | Where-Object { [System.Guid]::TryParse($_.PSChildName, $([ref][guid]::Empty)) }
 
@@ -26,21 +23,18 @@ function Uninstall-CurrentVersion()
         
         Uninstall-ChocolateyPackage @packageArgs
     }
-    elseif ($keys.Count -gt 2)
-    {
+    elseif ($keys.Count -gt 2) {
         Write-Warning "$($keys.Count) matches found!"
         Write-Warning 'To prevent accidental data loss, no programs will be uninstalled.'
         Write-Warning 'Please alert package maintainer the following keys were matched:'
-        $keys | ForEach-Object {Write-Warning "- $($_.PSChildName) ($($_.DisplayName))"}
+        $keys | ForEach-Object { Write-Warning "- $($_.PSChildName) ($($_.DisplayName))" }
     }
 }
 
-function Get-CurrentVersion()
-{
+function Get-CurrentVersion {
     [array] $keys = Get-UninstallRegistryKey -SoftwareName $softwareName
 
-    if ($keys.Count -ge 1)
-    {
+    if ($keys.Count -ge 1) {
         return $keys[0].DisplayVersion
     }
 
