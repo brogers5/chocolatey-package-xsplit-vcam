@@ -6,7 +6,7 @@ function Uninstall-CurrentVersion()
         packageName    = $env:ChocolateyPackageName
         softwareName   = $softwareName
         fileType       = 'MSI'
-        silentArgs     = "/qn /norestart"
+        silentArgs     = '/qn /norestart'
         validExitCodes = @(0, 3010, 1605, 1614, 1641)
     }
     
@@ -29,8 +29,8 @@ function Uninstall-CurrentVersion()
     elseif ($keys.Count -gt 2)
     {
         Write-Warning "$($keys.Count) matches found!"
-        Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
-        Write-Warning "Please alert package maintainer the following keys were matched:"
+        Write-Warning 'To prevent accidental data loss, no programs will be uninstalled.'
+        Write-Warning 'Please alert package maintainer the following keys were matched:'
         $keys | ForEach-Object {Write-Warning "- $($_.PSChildName) ($($_.DisplayName))"}
     }
 }
