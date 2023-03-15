@@ -5,10 +5,9 @@ Confirm-Win10
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 . $toolsDir\helpers.ps1
 
-$softwareVersion = '4.1.2211.2501'
-
+[version] $softwareVersion = '4.1.2211.2501'
 $installedVersion = Get-CurrentVersion
-if ([Version] $softwareVersion -lt [Version] $installedVersion) {
+if ($softwareVersion -lt $installedVersion) {
   Write-Output "Current installed version (v$installedVersion) must be uninstalled first..."
   Uninstall-CurrentVersion
 }

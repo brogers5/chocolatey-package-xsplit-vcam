@@ -35,7 +35,7 @@ function Get-CurrentVersion {
     [array] $keys = Get-UninstallRegistryKey -SoftwareName $softwareName
 
     if ($keys.Count -ge 1) {
-        return $keys[0].DisplayVersion
+        return [version] $keys[0].DisplayVersion
     }
 
     return $null

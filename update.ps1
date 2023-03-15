@@ -17,9 +17,9 @@ function global:au_AfterUpdate ($Package) {
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1'   = @{
-            '(^[$]softwareVersion\s*=\s*)''.*'''  = "`$1'$($Latest.Version)'"
-            '(^[$]?\s*url64bit\s*=\s*)(''.*'')'   = "`$1'$($Latest.Url64)'"
-            '(^[$]?\s*checksum64\s*=\s*)(''.*'')' = "`$1'$($Latest.Checksum64)'"
+            '(^\[version\] \$softwareVersion\s*=\s*)''.*''' = "`$1'$($Latest.Version)'"
+            '(^[$]?\s*url64bit\s*=\s*)(''.*'')'             = "`$1'$($Latest.Url64)'"
+            '(^[$]?\s*checksum64\s*=\s*)(''.*'')'           = "`$1'$($Latest.Checksum64)'"
         }
         "$($Latest.PackageName).nuspec" = @{
             "(<packageSourceUrl>)[^<]*(</packageSourceUrl>)" = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
