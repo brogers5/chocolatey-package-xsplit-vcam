@@ -57,7 +57,7 @@ Any desired arguments can simply be appended to the package's default install ar
 ### Example
 
 ```shell
-choco install xsplit-vcam --install-arguments "ProductLanguage=3082 AI_DESKTOP_SH=0 XI_ONBOARD=0"
+choco install xsplit-vcam --install-arguments="'ProductLanguage=3082 AI_DESKTOP_SH=0 XI_ONBOARD=0'"
 ```
 
 ---

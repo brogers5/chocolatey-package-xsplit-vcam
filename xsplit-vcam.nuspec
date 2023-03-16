@@ -76,7 +76,7 @@ Any desired arguments can simply be appended to the package's default install ar
 ### Example
 
 ```shell
-choco install xsplit-vcam --install-arguments "ProductLanguage=3082 AI_DESKTOP_SH=0 XI_ONBOARD=0"
+choco install xsplit-vcam --install-arguments="ProductLanguage=3082 AI_DESKTOP_SH=0 XI_ONBOARD=0"
 ```
 
 ---
@@ -86,7 +86,7 @@ For future upgrade operations, consider opting into Chocolatey's `useRememberedA
 ```shell
 choco feature enable --name="'useRememberedArgumentsForUpgrades'"
 ```
-]]></description>
+]]>    </description>
     <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vR-_FCBC9uklubXlP4Qi2zfj8eZktdRthn6i2fJmhGy6zkLDdeLFU0Ad9Hj7TLTD94R6c5TxyyQXVtI/pub</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
