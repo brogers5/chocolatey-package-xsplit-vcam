@@ -1,6 +1,10 @@
 Import-Module au
 
 function global:au_BeforeUpdate ($Package) {
+    if ([string]::IsNullOrWhiteSpace($Latest.ReleaseNotes)) {
+        Write-Warning 'release_notes_url is not available - consider requerying the API later!'
+    }
+
     #Archive this version for future development, since the vendor does not guarantee perpetual availability
     $filePath = ".\XSplit_VCam_$($Latest.SoftwareVersion).msi"
     Invoke-WebRequest -Uri $Latest.Url64 -OutFile $filePath
