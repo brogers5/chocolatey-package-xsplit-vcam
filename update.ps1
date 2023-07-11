@@ -6,7 +6,7 @@ function global:au_BeforeUpdate ($Package) {
     }
 
     #Archive this version for future development, since the vendor does not guarantee perpetual availability
-    $filePath = ".\XSplit_VCam_$($Latest.SoftwareVersion).msi"
+    $filePath = ".\XSplit_VCam_$($Latest.Version).msi"
     Invoke-WebRequest -Uri $Latest.Url64 -OutFile $filePath
 
     $Latest.Checksum64 = (Get-FileHash -Path $filePath -Algorithm SHA256).Hash.ToLower()
