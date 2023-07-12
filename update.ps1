@@ -3,7 +3,8 @@ Import-Module au
 $userAgent = "Update checker of Chocolatey Community Package 'xsplit-vcam'"
 
 function global:au_BeforeUpdate ($Package) {
-    if ([string]::IsNullOrWhiteSpace($Latest.ReleaseNotes)) {
+    $apiProvidedReleaseNotes = $Latest.ReleaseNotes
+    if ([string]::IsNullOrWhiteSpace($apiProvidedReleaseNotes)) {
         Write-Warning 'release_notes_url is not available'
         Write-Warning 'SplitMediaLabs may not have published release notes yet - consider delaying package release!'
         Write-Warning 'For now, falling back on redirect from canonical URL'
@@ -22,6 +23,12 @@ function global:au_BeforeUpdate ($Package) {
     if ($packageReleaseNotes -eq $Latest.ReleaseNotes) {
         Write-Warning 'releaseNotes URL is identical'
         Write-Warning 'URL may have been reused, or no URL may be available'
+
+        if ($apiProvidedReleaseNotes -ne $Latest.ReleaseNotes) {
+            Write-Warning 'Please manually review the provided URLs, then edit the package metadata and repack if appropriate:'
+            Write-Warning "API: '$apiProvidedReleaseNotes'"
+            Write-Warning "Canonical: '$($Latest.ReleaseNotes)'"
+        }
     }
 
     #Archive this version for future development, since the vendor does not guarantee perpetual availability
