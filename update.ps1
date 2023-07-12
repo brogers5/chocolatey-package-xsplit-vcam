@@ -4,13 +4,24 @@ $userAgent = "Update checker of Chocolatey Community Package 'xsplit-vcam'"
 
 function global:au_BeforeUpdate ($Package) {
     if ([string]::IsNullOrWhiteSpace($Latest.ReleaseNotes)) {
-        Write-Warning 'release_notes_url is not available - falling back on redirect from canonical URL'
+        Write-Warning 'release_notes_url is not available'
+        Write-Warning 'SplitMediaLabs may not have published release notes yet - consider delaying package release!'
+        Write-Warning 'For now, falling back on redirect from canonical URL'
 
         $canonicalUri = 'https://xspl.it/vcam/relnotes'
         $response = Invoke-WebRequest -Uri $canonicalUri -UserAgent $userAgent -MaximumRedirection 0 -SkipHttpErrorCheck -UseBasicParsing -ErrorAction SilentlyContinue
         $redirectedUri = $response.Headers['Location']
-        
+
         $Latest.ReleaseNotes = $redirectedUri
+    }
+
+    $packageReleaseNotes = $Package.NuspecXml.package.metadata.releaseNotes
+
+    #SplitMediaLabs sometimes reuses URLs or doesn't bother to publish new release notes.
+    #For package release note purposes, note when this happens.
+    if ($packageReleaseNotes -eq $Latest.ReleaseNotes) {
+        Write-Warning 'releaseNotes URL is identical'
+        Write-Warning 'URL may have been reused, or no URL may be available'
     }
 
     #Archive this version for future development, since the vendor does not guarantee perpetual availability
