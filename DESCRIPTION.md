@@ -1,12 +1,3 @@
-
----
-
-### [choco://xsplit-vcam](choco://xsplit-vcam)
-
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
-
----
-
 ## XSplit VCam: Webcam Background Software
 
 XSplit VCam makes cutting edge background removal and blurring possible with any webcam, without the need for expensive green screens, and complicated lighting setups.
