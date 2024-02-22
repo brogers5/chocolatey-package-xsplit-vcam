@@ -48,9 +48,9 @@ function global:au_SearchReplace {
             '(^[$]?\s*checksum64\s*=\s*)(''.*'')'           = "`$1'$($Latest.Checksum64)'"
         }
         "$($Latest.PackageName).nuspec" = @{
-            "(<packageSourceUrl>)[^<]*(</packageSourceUrl>)" = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)"       = "`${1}$($Latest.ReleaseNotes)`$2"
-            "(<copyright>)[^<]*(</copyright>)"               = "`$1© $(Get-Date -Format yyyy) SplitmediaLabs, Ltd. All Rights Reserved.`$2"
+            '(<packageSourceUrl>)[^<]*(</packageSourceUrl>)' = "`$1https://github.com/brogers5/chocolatey-package-$($Latest.PackageName)/tree/v$($Latest.Version)`$2"
+            '(\<releaseNotes\>).*?(\</releaseNotes\>)'       = "`${1}$($Latest.ReleaseNotes)`$2"
+            '(<copyright>)[^<]*(</copyright>)'               = "`$1© $(Get-Date -Format yyyy) SplitmediaLabs, Ltd. All Rights Reserved.`$2"
         }
     }
 }
@@ -66,7 +66,7 @@ function global:au_GetLatest {
         ReleaseNotes    = $releaseData.release_notes_url
         SoftwareVersion = $releaseData.version
         Url64           = $releaseData.download_url
-        Version         = $releaseData.version #This may change if building a package fix version
+        Version         = Get-Version -Version $releaseData.version #This may change if building a package fix version
     }
 }
 
