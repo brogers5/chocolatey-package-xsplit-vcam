@@ -27,7 +27,11 @@ choco pack
 
 A successful build will create `xsplit-vcam.w.x.y.z.nupkg`, where `w.x.y.z` should be the Nuspec's `version` value at build time.
 
-Note that Chocolatey package builds are non-deterministic. Consequently, an independently built package will fail a checksum validation against officially published packages.
+>[!Note]
+>As of Chocolatey v2.0.0, [leading zeros will no longer be used/honored within version numbers](https://github.com/chocolatey/choco/issues/1174). Legacy package versions that contain these will be normalized to remove them from the resulting filename. Going forward, `version` will be normalized accordingly for behavior consistency between v1 and v2 Chocolatey releases.
+
+>[!Note]
+>Chocolatey package builds are non-deterministic. Consequently, an independently built package's checksum will not match that of the officially published package.
 
 ## Update
 
@@ -53,7 +57,7 @@ While not strictly necessary to produce a working package, it's recommended to [
 
 This should enable automated submission of the installer package to VirusTotal, which would improve the user experience for Chocolatey Pro+ users. They have access to Chocolatey's [Runtime Malware Protection feature](https://docs.chocolatey.org/en-us/features/virus-check), which by default is [enabled and configured for VirusTotal integration](https://docs.chocolatey.org/en-us/features/virus-check#virustotal).
 
-Normally, the Community Repository's Package Scanner service would upload the installer package to VirusTotal, as a prerequisite to the moderation process's Scan Testing step. Unfortunately, the package is currently incompatible with it (due to the installer package [exceeding the current 200MB file size limit](https://github.com/chocolatey/home/issues/247)), and will therefore fail to submit the installer binary.
+Normally, the Community Repository's Package Scanner service would upload the installer package to VirusTotal, as a prerequisite to the moderation process's Scan Testing step. Unfortunately, the package is currently incompatible with it (due to the installer package [exceeding the current 200MB file size limit](https://github.com/chocolatey/home/issues/247)), and will therefore fail to submit the installer package.
 
 As new XSplit VCam releases are unlikely to have been scanned prior to an updated package's publication, this would avoid burdening users with [a run-time prompt to optionally upload the installer binary to VirusTotal for scanning](https://docs.chocolatey.org/en-us/features/virus-check#what-if-virustotal-doesnt-have-results-for-a-binary).
 
