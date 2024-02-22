@@ -35,6 +35,13 @@ function global:au_BeforeUpdate ($Package) {
     $filePath = ".\XSplit_VCam_$($Latest.Version).msi"
     Invoke-WebRequest -Uri $Latest.Url64 -OutFile $filePath
 
+    if ((Get-Command -Name 'vt' -CommandType Application -ErrorAction SilentlyContinue)) {
+        vt.exe scan file "$filePath" --silent
+    }
+    else {
+        Write-Warning 'VirusTotal CLI is not available - skipping VirusTotal submission'
+    }
+
     $Latest.Checksum64 = (Get-FileHash -Path $filePath -Algorithm SHA256).Hash.ToLower()
 
     Set-DescriptionFromReadme -Package $Package -ReadmePath '.\DESCRIPTION.md'
