@@ -5,7 +5,7 @@ Confirm-Win10
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 . $toolsDir\helpers.ps1
 
-[version] $softwareVersion = '4.1.2306.2801'
+[version] $softwareVersion = '4.2.2402.0901'
 $installedVersion = Get-CurrentVersion
 
 if ($installedVersion -and $installedVersion -eq $softwareVersion -and !$env:ChocolateyForce) {
@@ -22,8 +22,8 @@ else {
     packageName    = $env:ChocolateyPackageName
     softwareName   = 'XSplit VCam'
     fileType       = 'MSI'
-    url64bit       = 'https://cdn2.xsplit.com/download/vc/4.1.2306.2801/XSplit_VCam_4.1.2306.2801.msi'
-    checksum64     = '7c4771e5e810d154b894071722c2b703a0aa021607d6fd2746f0369310c021d0'
+    url64bit       = 'https://cdn2.xsplit.com/download/vc/4.2.2402.0901/XSplit_VCam_4.2.2402.0901.msi'
+    checksum64     = 'e005eaed65856467b7f4797ae4ebc8d87b03abe79a1bd35f5e9c6e979309e5a8'
     checksumType64 = 'sha256'
     silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
     validExitCodes = @(0, 3010, 1641)

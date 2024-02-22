@@ -3,30 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xsplit-vcam</id>
-    <version>4.1.2306.2801</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.1.2306.2801</packageSourceUrl>
+    <version>4.2.2402.901</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.2.2402.901</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>XSplit VCam</title>
     <authors>SplitmediaLabs Ltd.</authors>
     <projectUrl>https://www.xsplit.com/vcam</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-xsplit-vcam@7ddfa2f456eb462820f4e95f5d38652e15316f98/xsplit-vcam.png</iconUrl>
-    <copyright>© 2023 SplitmediaLabs, Ltd. All Rights Reserved.</copyright>
+    <copyright>© 2024 SplitmediaLabs, Ltd. All Rights Reserved.</copyright>
     <licenseUrl>https://www.xsplit.com/terms-and-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.xsplit.com/en/category/xsplit-vcam-1yieers/</docsUrl>
     <mailingListUrl>https://www.reddit.com/r/xsplitofficial/</mailingListUrl>
     <tags>xsplit-vcam xsplit vcam webcam virtual camera cam background blur watermark screenshot 64-bit freemium cross-platform</tags>
     <summary>The Swiss army knife for your webcam</summary>
-    <description><![CDATA[
----
-
-### [choco://xsplit-vcam](choco://xsplit-vcam)
-
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://community.chocolatey.org/packages/choco-protocol-support)
-
----
-
-## XSplit VCam: Webcam Background Software
+    <description><![CDATA[## XSplit VCam: Webcam Background Software
 
 XSplit VCam makes cutting edge background removal and blurring possible with any webcam, without the need for expensive green screens, and complicated lighting setups.
 
