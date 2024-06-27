@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xsplit-vcam</id>
-    <version>4.2.2402.901</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.2.2402.901</packageSourceUrl>
+    <version>4.2.2402.903</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.2.2402.903</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>XSplit VCam</title>
     <authors>SplitmediaLabs Ltd.</authors>
