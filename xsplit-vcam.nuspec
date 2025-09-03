@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xsplit-vcam</id>
-    <version>4.2.2407.1901</version>
-    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.2.2407.1901</packageSourceUrl>
+    <version>4.2.2407.1903</version>
+    <packageSourceUrl>https://github.com/brogers5/chocolatey-package-xsplit-vcam/tree/v4.2.2407.1903</packageSourceUrl>
     <owners>sublym0nal</owners>
     <title>XSplit VCam</title>
     <authors>SplitmediaLabs Ltd.</authors>
     <projectUrl>https://www.xsplit.com/vcam</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/brogers5/chocolatey-package-xsplit-vcam@7ddfa2f456eb462820f4e95f5d38652e15316f98/xsplit-vcam.png</iconUrl>
-    <copyright>© 2024 SplitmediaLabs, Ltd. All Rights Reserved.</copyright>
+    <copyright>© 2025 SplitmediaLabs, Ltd. All Rights Reserved.</copyright>
     <licenseUrl>https://www.xsplit.com/terms-and-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.xsplit.com/en/category/xsplit-vcam-1yieers/</docsUrl>
@@ -78,7 +78,7 @@ For future upgrade operations, consider opting into Chocolatey's `useRememberedA
 choco feature enable --name="'useRememberedArgumentsForUpgrades'"
 ```
 ]]></description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://docs.google.com/document/d/e/2PACX-1vQYDuPjND1-VmSPTj89Zyk8oPy0dAI5z8F1eVPuAWsEAKb6lMqSo0zV3tU47DEmeK4r2KLK2P_d0Nrd/pub</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
